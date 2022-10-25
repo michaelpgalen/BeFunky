@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeFunky Support</title>
+    <title>BeFunky Contact</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <header>    
         <nav>
             <div class="logo-link">
                 <a href="/index.html">
+                    LOGO
                    <img src="" alt="">
                 </a>
             </div>    
@@ -47,10 +49,13 @@
                 <label for="subject">Subject*</label>
                 <input type="text" id="subject">
                 <label for="message">Please tell us what you're having trouble with today*</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                <label for="attachments">Would you like to include any attachments?</label>
-                <input type="file" name="attachments" id="attachments">
-                <input type="submit" value="Submit">
+                <textarea name="message" id="message" cols="" rows=""></textarea>
+                <p>Would you like ot include any attachments?</p>
+                <label class="file-attachment" for="attachments">
+                    <span>Add Files.</span> Or Drag And Drop Files Here
+                    <input type="file" name="attachments" id="attachments">
+                </label>
+                <input class="button" type="submit" value="Submit">
             </form>
         </div>
     </main>

@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5rem;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #1D1B2F;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav div a {
+    margin: 0 1rem;
+}
+
+.navBar-menu-toggle {
+    display: none;
+}
+
+.container-content {
+    max-width: 800px;
+    margin: 6rem auto;
+}
+
+.questions-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.question-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 300px;
+    margin: 1rem 0.5rem;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.button {
+    background-color: #3A36E4;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.ic-angle {
+    padding-inline-start: 1rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+/* FORM STYLES */
+label {
+    display: block;
+    color: #1D1B2F;
+}
+
+input[type=file] {
+    display: none;
+}
+
+label span {
+    color: #3A36E4;
+    margin-inline-end: 1ch;
+}
+
+.file-attachment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1D1B2F;
+    border: 1px dashed #D7D8E3;
+    height: 6rem;
+}
+
+.file-attachment:hover {
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    padding: 6px 8px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 4px;
+    border: 1px solid #D7D8E3;
+}
+
+input[type=submit] {
+    width: max-content;
+    float: inline-end;
+}
+
+
+/* input[type="file"]::file-selector-button {
+    
+} */
+
+/* .upload-file {
+} */
+
+textarea {
+    width: 100%;
+    height: 15em;
+    margin: 0.5rem 0 1rem 0;
+    border: 1px solid #D7D8E3;
+}
+
+select {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5rem 0 1rem 0;
+    background-color: white;
+    border: 1px solid #D7D8E3;
+    color: #84809D;
+}
