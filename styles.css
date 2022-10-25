@@ -1,3 +1,12 @@
+/* 
+COLORS ----------
+TEXT: Titles/Body/Main Nav: #1D1B2F
+Links/Buttons: #3A36E4
+Borders: #D7D8E3
+error border: #C51C4F
+error: #FFD4E1
+*/
+
 * {
     box-sizing: border-box;
 }
@@ -22,7 +31,8 @@ h2 {
 
 a {
     text-decoration: none;
-    color: #1D1B2F;
+    color: #3A36E4;
+    cursor: pointer;
 }
 
 nav {
@@ -36,6 +46,7 @@ nav {
 
 nav div a {
     margin: 0 1rem;
+    color: #1D1B2F;
 }
 
 .navBar-menu-toggle {
@@ -51,6 +62,7 @@ nav div a {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    gap: 1rem;
 }
 
 .question-card {
@@ -60,7 +72,6 @@ nav div a {
     border-radius: 8px;
     padding: 1rem;
     max-width: 300px;
-    margin: 1rem 0.5rem;
 }
 
 .txt-center {
@@ -72,6 +83,7 @@ nav div a {
     color: white;
     padding: 8px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .ic-angle {
@@ -121,14 +133,6 @@ input[type=submit] {
     float: inline-end;
 }
 
-
-/* input[type="file"]::file-selector-button {
-    
-} */
-
-/* .upload-file {
-} */
-
 textarea {
     width: 100%;
     height: 15em;
@@ -143,4 +147,53 @@ select {
     background-color: white;
     border: 1px solid #D7D8E3;
     color: #84809D;
+}
+
+fieldset {
+    padding: 0;
+    border: none;
+}
+
+.cc {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.ccExpir {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    border: 1px solid #D7D8E3;
+    padding: 0;
+    height: min-content;
+}
+
+#ccDigits {
+    margin: 0;
+}
+
+#ccExpirMM, #ccExpirYY {
+    border: none;
+    margin: 0 auto;
+    padding: 0 inherit;
+}
+
+.border {
+    color: #D7D8E3;
+}
+
+.hidden {
+    display: none;
+}
+
+.file-attachment {
+    margin: 0.5rem 0 1rem 0;
+}
+
+.error-message {
+    background-color: #FFD4E1;
+    border: 1px solid #C51C4F;
+    padding: 8px 16px;
+    margin: 1rem auto;
 }
