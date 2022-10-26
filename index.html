@@ -10,23 +10,23 @@
 </head>
 <body>
     <header>  
-        <nav>
+        <nav id="topnav" class="topnav">
             <div class="logo-link">
                 <a href="/index.html">
                     LOGO
                    <img src="" alt="">
                 </a>
             </div>    
-            <div class="nav-create_learn_support"> 
+            <div class="nav-links"> 
                 <a href="">Create</a>
                 <a href="">Learn</a>
                 <a href="">Support</a>
             </div>
-            <div class="nav-signInUp">
+            <div class="nav-links nav-signInUp">
                 <a href="">Sign In</a>
                 <a class="button" href="">Get Started</a>
             </div>
-            <button class="navBar-menu-toggle">
+            <button class="menu-toggle" onclick="toggleResponsive()">
                 <span class="menu-bar"></span>
                 <span class="menu-bar"></span>
                 <span class="menu-bar"></span>
@@ -38,19 +38,19 @@
         <div class="container-content">
             <h1 class="txt-center">What Can We Help You With Today?</h1>
             <div class="questions-container">
-                <a href="/form.html?isBillingIssue=false" class="question-card">
+                <a href="/form.html?isBillingIssue=false&isSignedIn=false" class="question-card">
                     <h2>I Want to Cancel My BeFunky Plus Subscription</h2>
                     <div class="ic-angle">&gt;</div>
                 </a>
-                <a href="/form.html?isBillingIssue=true" class="question-card">
+                <a href="/form.html?isBillingIssue=true&isSignedIn=false" class="question-card">
                     <h2>Am Requesting A Refund For My Plus Subscription</h2>
                     <div class="ic-angle">&gt;</div>
                 </a>
-                <a href="/form.html?isBillingIssue=false" class="question-card">
+                <a href="/form.html?isBillingIssue=false&isSignedIn=false" class="question-card">
                     <h2>I Have An Unrecognized Charge From BeFunky</h2>
                     <div class="ic-angle">&gt;</div>
                 </a>
-                <a href="/form.html?isBillingIssue=false" class="question-card">
+                <a href="/form.html?isBillingIssue=false&isSignedIn=false" class="question-card">
                     <h2>I Am Unable To Access My Plus Features On My Account</h2>
                     <div class="ic-angle">&gt;</div>
                 </a>

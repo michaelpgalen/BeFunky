@@ -1,11 +1,12 @@
-/* 
-COLORS ----------
-TEXT: Titles/Body/Main Nav: #1D1B2F
-Links/Buttons: #3A36E4
-Borders: #D7D8E3
-error border: #C51C4F
-error: #FFD4E1
-*/
+:root {
+    --Primary-Text-Color: #1D1B2F;
+    --Primary-Light-Color: #1D1B2F80;
+    --Link-Button-Color: #3A36E4;
+    --Link-Button-Color-Fade: #3A36E4CC;
+    --Border-Color: rgba(0, 0 ,0, 0.1);
+    --Error-Bg-Color: #FFD4E1;
+    --Error-Border-Color: #C51C4F;
+  }  
 
 * {
     box-sizing: border-box;
@@ -15,12 +16,14 @@ body {
     font-size: 16px;
     line-height: 1.5rem;
     margin: 0;
+    color: var(--Primary-Text-Color);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h1 {
     font-size: 2rem;
     font-weight: 600;
+    line-height: 1.5em;
 }
 
 h2 {
@@ -31,7 +34,7 @@ h2 {
 
 a {
     text-decoration: none;
-    color: #3A36E4;
+    color: var(--Link-Button-Color);
     cursor: pointer;
 }
 
@@ -41,15 +44,19 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--Border-Color);
 }
 
 nav div a {
     margin: 0 1rem;
-    color: #1D1B2F;
+    color:  var(--Primary-Text-Color);
 }
 
-.navBar-menu-toggle {
+.logo-link {
+    background-color: var(--Border-Color);
+}
+
+.menu-toggle {
     display: none;
 }
 
@@ -68,10 +75,17 @@ nav div a {
 .question-card {
     display: flex;
     align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--Border-Color);
+    color: var(--Primary-Text-Color);
     border-radius: 8px;
     padding: 1rem;
     max-width: 300px;
+}
+.question-card:hover {
+    border-color: var(--Primary-Text-Color);
+}
+.question-card:active {
+    background-color: var(--Border-Color);
 }
 
 .txt-center {
@@ -79,11 +93,15 @@ nav div a {
 }
 
 .button {
-    background-color: #3A36E4;
+    background-color: var(--Link-Button-Color);
     color: white;
     padding: 8px;
     border-radius: 4px;
     cursor: pointer;
+}
+.button:hover {
+    background-color: var(--Link-Button-Color-Fade);
+    transition: background-color 0.2s;
 }
 
 .ic-angle {
@@ -95,7 +113,6 @@ nav div a {
 /* FORM STYLES */
 label {
     display: block;
-    color: #1D1B2F;
 }
 
 input[type=file] {
@@ -103,7 +120,7 @@ input[type=file] {
 }
 
 label span {
-    color: #3A36E4;
+    color: var(--Link-Button-Color);
     margin-inline-end: 1ch;
 }
 
@@ -111,8 +128,7 @@ label span {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #1D1B2F;
-    border: 1px dashed #D7D8E3;
+    border: 1px dashed var(--Border-Color);
     height: 6rem;
 }
 
@@ -125,7 +141,7 @@ input {
     padding: 6px 8px;
     margin: 0.5rem 0 1rem 0;
     border-radius: 4px;
-    border: 1px solid #D7D8E3;
+    border: 1px solid var(--Border-Color);
 }
 
 input[type=submit] {
@@ -137,7 +153,7 @@ textarea {
     width: 100%;
     height: 15em;
     margin: 0.5rem 0 1rem 0;
-    border: 1px solid #D7D8E3;
+    border: 1px solid var(--Border-Color);
 }
 
 select {
@@ -145,8 +161,7 @@ select {
     padding: 0.5em;
     margin: 0.5rem 0 1rem 0;
     background-color: white;
-    border: 1px solid #D7D8E3;
-    color: #84809D;
+    border: 1px solid var(--Border-Color);
 }
 
 fieldset {
@@ -164,7 +179,7 @@ fieldset {
     display: flex;
     width: 50%;
     align-items: center;
-    border: 1px solid #D7D8E3;
+    border: 1px solid var(--Border-Color);
     padding: 0;
     height: min-content;
 }
@@ -180,7 +195,7 @@ fieldset {
 }
 
 .border {
-    color: #D7D8E3;
+    color: var(--Border-Color);
 }
 
 .hidden {
@@ -192,8 +207,57 @@ fieldset {
 }
 
 .error-message {
-    background-color: #FFD4E1;
-    border: 1px solid #C51C4F;
+    background-color: var(--Error-Bg-Color);
+    border: 1px solid var(--Error-Border-Color);
     padding: 8px 16px;
     margin: 1rem auto;
 }
+
+.error-message.show {
+    display: block;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 600px) {
+    #topnav div:not(:first-child) {
+        display: none;
+    }
+    #topnav.open {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    .menu-toggle {
+      float: right;
+      display: block;
+      position: absolute;
+      right: 1rem;
+      top: 0.8rem;
+      background-color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    #topnav.open button {
+        background-color: var(--Border-Color);
+    }
+    .menu-bar {
+        display: block;
+        width: 2rem;
+        height: 2px;
+        background-color: var(--Primary-Text-Color);
+        margin: 6px 0;
+    }
+    #topnav.open div {
+        display:block;
+    }
+    .nav-links a {
+        display: block;
+        margin-bottom: 0.2rem;
+    }
+    .container-content {
+        padding:0 1rem;
+    }
+  }

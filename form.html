@@ -10,29 +10,27 @@
 </head>
 <body>
     <header>    
-        <nav>
+        <nav id="topnav" class="topnav">
             <div class="logo-link">
                 <a href="/index.html">
                     LOGO
                    <img src="" alt="">
                 </a>
             </div>    
-            <div> 
+            <div class="nav-links"> 
                 <a href="">Create</a>
                 <a href="">Learn</a>
                 <a href="">Support</a>
             </div>
-            <div>
-                <div class="nav-signInUp">
-                    <a href="">Sign In</a>
-                    <a class="button" href="">Get Started</a>
-                </div>
-                <button class="navBar-menu-toggle">
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                </button>
+            <div class="nav-links nav-signInUp">
+                <a href="">Sign In</a>
+                <a class="button" href="">Get Started</a>
             </div>
+            <button class="menu-toggle" onclick="toggleResponsive()">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
         </nav>
     </header>
 
@@ -40,7 +38,7 @@
         <div class="container-content">
             <a class="back" onclick="history.back()">Back</a>
             <h1>Contact BeFunky Support</h1>
-            <div class="error-message">Looks like you're not signed in. For the fastest response be sure to <a href="">Sign In</a> to your account.</div>
+            <div class="error-message hidden">Looks like you're not signed in. For the fastest response be sure to <a href="">Sign In</a> to your account.</div>
             <form id="form" action="">
                 <label for="email">What's your email address?*</label>
                 <input type="email" id="email" name="email" required>
