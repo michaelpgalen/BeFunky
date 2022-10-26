@@ -17,7 +17,8 @@ body {
     line-height: 1.5rem;
     margin: 0;
     color: var(--Primary-Text-Color);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'Mulish', 'GillSans', sans-serif;
 }
 
 h1 {
