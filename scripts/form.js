@@ -43,11 +43,12 @@ formSubmitButton.addEventListener("click", function (event){
 })
 
 // Responsive Menu
-function toggleResponsive() {
+function toggleResponsive(menuHam) {
     let topNav = document.getElementById("topnav");
     if (topNav.className === "topnav") {
       topNav.className += " open";
     } else {
       topnav.className = "topnav";
     }
+    menuHam.classList.toggle("change");
   } 
