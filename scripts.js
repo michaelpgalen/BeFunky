@@ -102,8 +102,11 @@ if (form) {
 
 const formSubmitButton = document.querySelector('input.button');
 formSubmitButton.addEventListener("click", function (event){
-  event.target.value = "Received";
-  event.target.style.backgroundColor = 'DarkSeaGreen';
+  const invalids = document.querySelectorAll(':invalid');
+  if (invalids.length == 0) {
+    event.target.value = "Received";
+    event.target.style.backgroundColor = 'DarkSeaGreen';
+  }
 })
 
 function submitForm(button) {
