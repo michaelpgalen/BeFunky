@@ -94,10 +94,21 @@ function getData(form) {
 
 const form = document.getElementById("form");
 if (form) {
-    document.getElementById("form").addEventListener("submit", function (event) {
+    form.addEventListener("submit", function (event) {
         event.preventDefault();
         getData(event.target);
       });
+}
+
+const formSubmitButton = document.querySelector('input.button');
+formSubmitButton.addEventListener("click", function (event){
+  event.target.value = "Received";
+  event.target.style.backgroundColor = 'DarkSeaGreen';
+})
+
+function submitForm(button) {
+  button.value = "Received";
+  button.style.backgroundColor = 'DarkSeaGreen';
 }
 
 // Responsive Menu
