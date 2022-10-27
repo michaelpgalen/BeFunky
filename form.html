@@ -42,7 +42,8 @@
             <a class="back" onclick="history.back()">Back</a>
             <h1>Contact BeFunky Support</h1>
             <div class="error-message hidden">Looks like you're not signed in. For the fastest response be sure to <a href="">Sign In</a> to your account.</div>
-            <form id="form" action="">
+            <!-- FOR APPENDING DOM -->
+            <!-- <form id="form" action="">
                 <label for="email">What's your email address?*</label>
                 <input type="email" id="email" name="email" required>
                 <label for="devices">What type of device are you using?</label>
@@ -61,7 +62,49 @@
                     <input type="file" name="attachments" id="attachments">
                 </label>
                 <input class="button" type="submit" value="Submit">
+            </form> -->
+
+            <!-- old -->
+            <form id="form" action="">
+                <label for="email">What's your email address?*</label>
+                <input type="email" id="email" name="email" required>
+                <label for="devices">What type of device are you using?</label>
+                <select name="devices" id="devices">
+                    <option value="mobile">Mobile</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="desktop">Desktop</option>
+                </select>
+                <label for="subject">Subject*</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="message">Please tell us what you're having trouble with today*</label>
+                <textarea name="message" id="message" cols="" rows="" required></textarea>
+
+                <fieldset isBillingIssue class="hidden">
+                    <legend>What are the last 4 digits and expiration date of your credit card?*</legend>
+                    <div class="cc">
+                        <label for="ccDigits"></label>
+                        <input type="text" pattern="[0-9]*" maxlength="4" id="ccDigits" name="ccDigits" placeholder="****" required>
+                        <div class="ccExpir">
+                            <label for="ccExpirMM"></label>
+                            <input type="tel" name="ccExpirMM" id="ccExpirMM" placeholder="MM" pattern="[0-9]*" maxlength="2" required>
+                            <div class="border">/</div>
+                            <label for="ccExpirYY"></label>
+                            <input type="tel" name="ccExpirYY" id="ccExpirYY" placeholder="YY" pattern="[0-9]*" maxlength="2" required>
+                        </div>
+                    </div>
+                </fieldset>
+                <label isBillingIssue class="hidden" for="last-charge">What is the date of your last charge?*</label>
+                <input isBillingIssue class="hidden" type="date" name="last-charge" id="last-charge" required>
+                
+                <p>Would you like ot include any attachments?</p>
+                <label class="file-attachment" for="attachments">
+                    <span>Add Files.</span> Or Drag And Drop Files Here
+                    <input type="file" name="attachments" id="attachments">
+                </label>
+                <input class="button" type="submit" value="Submit">
             </form>
+<!-- OLD -->
+
         </div>
     </main>
     
