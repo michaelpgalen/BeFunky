@@ -1,13 +1,3 @@
-:root {
-  --Primary-Text-Color: #1D1B2F;
-  --Primary-Light-Color: #1D1B2F80;
-  --Link-Button-Color: #3A36E4;
-  --Link-Button-Color-Fade: #3A36E4CC;
-  --Border-Color: rgba(0, 0 ,0, 0.1);
-  --Error-Bg-Color: #FFD4E1;
-  --Error-Border-Color: #C51C4F;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -16,7 +6,7 @@ body {
   font-size: 16px;
   line-height: 1.5rem;
   margin: 0;
-  color: var(--Primary-Text-Color);
+  color: #1D1B2F;
   font-family: "Mulish", "GillSans", sans-serif;
 }
 
@@ -34,7 +24,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: var(--Link-Button-Color);
+  color: #3A36E4;
   cursor: pointer;
 }
 
@@ -44,15 +34,15 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  border-bottom: 1px solid var(--Border-Color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-nav nav div a {
+nav div a {
   margin: 0 1rem;
-  color: var(--Primary-Text-Color);
+  color: #1D1B2F;
 }
 
 .logo-link {
-  background-color: var(--Border-Color);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .menu-toggle {
@@ -74,17 +64,17 @@ nav nav div a {
 .question-card {
   display: flex;
   align-items: center;
-  border: 1px solid var(--Border-Color);
-  color: var(--Primary-Text-Color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #1D1B2F;
   border-radius: 8px;
   padding: 1rem;
   max-width: 300px;
 }
 .question-card:hover {
-  border-color: var(--Primary-Text-Color);
+  border-color: #1D1B2F;
 }
 .question-card:active {
-  background-color: var(--Border-Color);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .txt-center {
@@ -92,14 +82,14 @@ nav nav div a {
 }
 
 .button {
-  background-color: var(--Link-Button-Color);
+  background-color: #3A36E4;
   color: white;
   padding: 8px;
   border-radius: 4px;
   cursor: pointer;
 }
 .button:hover {
-  background-color: var(--Link-Button-Color-Fade);
+  background-color: rgba(58, 54, 228, 0.8);
   transition: background-color 0.2s;
 }
 
@@ -114,7 +104,7 @@ label {
   display: block;
 }
 label span {
-  color: var(--Link-Button-Color);
+  color: #3A36E4;
   margin-inline-end: 1ch;
 }
 
@@ -126,7 +116,7 @@ input[type=file] {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px dashed var(--Border-Color);
+  border: 1px dashed rgba(0, 0, 0, 0.1);
   height: 6rem;
   margin: 0.5rem 0 1rem 0;
 }
@@ -139,7 +129,7 @@ input {
   padding: 6px 8px;
   margin: 0.5rem 0 1rem 0;
   border-radius: 4px;
-  border: 1px solid var(--Border-Color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 input[type=submit] {
   width: max-content;
@@ -150,7 +140,7 @@ textarea {
   width: 100%;
   height: 15em;
   margin: 0.5rem 0 1rem 0;
-  border: 1px solid var(--Border-Color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 select {
@@ -158,7 +148,7 @@ select {
   padding: 0.5em;
   margin: 0.5rem 0 1rem 0;
   background-color: white;
-  border: 1px solid var(--Border-Color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 fieldset {
@@ -176,7 +166,7 @@ fieldset {
   display: flex;
   width: 50%;
   align-items: center;
-  border: 1px solid var(--Border-Color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   height: min-content;
 }
@@ -192,7 +182,7 @@ fieldset {
 }
 
 .border {
-  color: var(--Border-Color);
+  color: rgba(0, 0, 0, 0.1);
 }
 
 .hidden {
@@ -200,8 +190,8 @@ fieldset {
 }
 
 .error-message {
-  background-color: var(--Error-Bg-Color);
-  border: 1px solid var(--Error-Border-Color);
+  background-color: #FFD4E1;
+  border: 1px solid #C51C4F;
   padding: 8px 16px;
   margin: 1rem auto;
 }
@@ -239,7 +229,7 @@ fieldset {
     display: block;
     width: 2rem;
     height: 2px;
-    background-color: var(--Primary-Text-Color);
+    background-color: #1D1B2F;
     margin: 6px 0;
     transition: 0.4s;
   }

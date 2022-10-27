@@ -1,12 +1,10 @@
-:root {
-    --Primary-Text-Color: #1D1B2F;
-    --Primary-Light-Color: #1D1B2F80;
-    --Link-Button-Color: #3A36E4;
-    --Link-Button-Color-Fade: #3A36E4CC;
-    --Border-Color: rgba(0, 0 ,0, 0.1);
-    --Error-Bg-Color: #FFD4E1;
-    --Error-Border-Color: #C51C4F;
-  }  
+$Primary-Text-Color: #1D1B2F;
+$Primary-Light-Color: #1D1B2F80;
+$Link-Button-Color: #3A36E4;
+$Link-Button-Color-Fade: #3A36E4CC;
+$Border-Color: rgba(0, 0 ,0, 0.1);
+$Error-Bg-Color: #FFD4E1;
+$Error-Border-Color: #C51C4F;
 
 * {
     box-sizing: border-box;
@@ -16,7 +14,7 @@ body {
     font-size: 16px;
     line-height: 1.5rem;
     margin: 0;
-    color: var(--Primary-Text-Color);
+    color: $Primary-Text-Color;
     font-family: 'Mulish', 'GillSans', sans-serif;
 }
 
@@ -34,7 +32,7 @@ h2 {
 
 a {
     text-decoration: none;
-    color: var(--Link-Button-Color);
+    color: $Link-Button-Color;
     cursor: pointer;
 }
 
@@ -44,15 +42,15 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    border-bottom: 1px solid var(--Border-Color);
-    nav div a {
+    border-bottom: 1px solid $Border-Color;
+    div a {
         margin: 0 1rem;
-        color:  var(--Primary-Text-Color);
+        color:  $Primary-Text-Color;
     }
 }
 
 .logo-link {
-    background-color: var(--Border-Color);
+    background-color: $Border-Color;
 }
 
 .menu-toggle {
@@ -74,16 +72,16 @@ nav {
 .question-card {
     display: flex;
     align-items: center;
-    border: 1px solid var(--Border-Color);
-    color: var(--Primary-Text-Color);
+    border: 1px solid $Border-Color;
+    color: $Primary-Text-Color;
     border-radius: 8px;
     padding: 1rem;
     max-width: 300px;
     &:hover {
-        border-color: var(--Primary-Text-Color);
+        border-color: $Primary-Text-Color;
     }
     &:active {
-        background-color: var(--Border-Color);
+        background-color: $Border-Color;
     }
 }
 
@@ -92,13 +90,13 @@ nav {
 }
 
 .button {
-    background-color: var(--Link-Button-Color);
+    background-color: $Link-Button-Color;
     color: white;
     padding: 8px;
     border-radius: 4px;
     cursor: pointer;
     &:hover {
-        background-color: var(--Link-Button-Color-Fade);
+        background-color: $Link-Button-Color-Fade;
         transition: background-color 0.2s;
     }
 }
@@ -113,7 +111,7 @@ nav {
 label {
     display: block;
     span {
-        color: var(--Link-Button-Color);
+        color: $Link-Button-Color;
         margin-inline-end: 1ch;
     }
 }
@@ -126,7 +124,7 @@ input[type=file] {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px dashed var(--Border-Color);
+    border: 1px dashed $Border-Color;
     height: 6rem;
     margin: 0.5rem 0 1rem 0;
     &:hover {
@@ -139,7 +137,7 @@ input {
     padding: 6px 8px;
     margin: 0.5rem 0 1rem 0;
     border-radius: 4px;
-    border: 1px solid var(--Border-Color);
+    border: 1px solid $Border-Color;
     &[type=submit]  {
         width: max-content;
         float: inline-end;
@@ -150,7 +148,7 @@ textarea {
     width: 100%;
     height: 15em;
     margin: 0.5rem 0 1rem 0;
-    border: 1px solid var(--Border-Color);
+    border: 1px solid $Border-Color;
 }
 
 select {
@@ -158,7 +156,7 @@ select {
     padding: 0.5em;
     margin: 0.5rem 0 1rem 0;
     background-color: white;
-    border: 1px solid var(--Border-Color);
+    border: 1px solid $Border-Color;
 }
 
 fieldset {
@@ -176,7 +174,7 @@ fieldset {
     display: flex;
     width: 50%;
     align-items: center;
-    border: 1px solid var(--Border-Color);
+    border: 1px solid $Border-Color;
     padding: 0;
     height: min-content;
 }
@@ -192,7 +190,7 @@ fieldset {
 }
 
 .border {
-    color: var(--Border-Color);
+    color: $Border-Color;
 }
 
 .hidden {
@@ -200,8 +198,8 @@ fieldset {
 }
 
 .error-message {
-    background-color: var(--Error-Bg-Color);
-    border: 1px solid var(--Error-Border-Color);
+    background-color: $Error-Bg-Color;
+    border: 1px solid $Error-Border-Color;
     padding: 8px 16px;
     margin: 1rem auto;
     &.show {
@@ -242,7 +240,7 @@ fieldset {
         display: block;
         width: 2rem;
         height: 2px;
-        background-color: var(--Primary-Text-Color);
+        background-color: $Primary-Text-Color;
         margin: 6px 0;
         transition: 0.4s;
     }
