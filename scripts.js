@@ -81,6 +81,7 @@ if (isSignedIn === 'false') {
 //     // billingIssueElems.forEach((elem) => elem.classList.remove('hidden'))
 // }
 
+// removes billing fields instead of hiding them, when not appropriate to avoid invalid fields
 if (isBillingIssue === 'false') {
   document.querySelectorAll('[isBillingIssue]').forEach((element) => element.remove())
 }
