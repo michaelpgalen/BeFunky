@@ -27,28 +27,20 @@ function getData(form) {
 }
 
 const form = document.getElementById("form");
-if (form) {
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        getData(event.target);
-      });
-}
+  form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      getData(event.target);
+    });
+
 
 const formSubmitButton = document.querySelector('input.button');
-if (formSubmitButton) {
-  formSubmitButton.addEventListener("click", function (event){
-    const invalids = document.querySelectorAll(':invalid');
-    if (invalids.length == 0) {
-      event.target.value = "Received";
-      event.target.style.backgroundColor = 'DarkSeaGreen';
-    }
-  })
-}
-
-function submitForm(button) {
-  button.value = "Received";
-  button.style.backgroundColor = 'DarkSeaGreen';
-}
+formSubmitButton.addEventListener("click", function (event){
+  const invalids = document.querySelectorAll(':invalid');
+  if (invalids.length == 0) {
+    event.target.value = "Received";
+    event.target.style.backgroundColor = 'DarkSeaGreen';
+  }
+})
 
 // Responsive Menu
 function toggleResponsive() {
