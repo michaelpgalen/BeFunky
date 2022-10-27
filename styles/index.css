@@ -1,3 +1,264 @@
+:root {
+  --Primary-Text-Color: #1D1B2F;
+  --Primary-Light-Color: #1D1B2F80;
+  --Link-Button-Color: #3A36E4;
+  --Link-Button-Color-Fade: #3A36E4CC;
+  --Border-Color: rgba(0, 0 ,0, 0.1);
+  --Error-Bg-Color: #FFD4E1;
+  --Error-Border-Color: #C51C4F;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin: 0;
+  color: var(--Primary-Text-Color);
+  font-family: "Mulish", "GillSans", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Link-Button-Color);
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--Border-Color);
+}
+nav nav div a {
+  margin: 0 1rem;
+  color: var(--Primary-Text-Color);
+}
+
+.logo-link {
+  background-color: var(--Border-Color);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.container-content {
+  max-width: 800px;
+  margin: 6rem auto;
+}
+
+.questions-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.question-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--Border-Color);
+  color: var(--Primary-Text-Color);
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 300px;
+}
+.question-card:hover {
+  border-color: var(--Primary-Text-Color);
+}
+.question-card:active {
+  background-color: var(--Border-Color);
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.button {
+  background-color: var(--Link-Button-Color);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--Link-Button-Color-Fade);
+  transition: background-color 0.2s;
+}
+
+.ic-angle {
+  padding-inline-start: 1rem;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+/* FORM STYLES */
+label {
+  display: block;
+}
+label span {
+  color: var(--Link-Button-Color);
+  margin-inline-end: 1ch;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.file-attachment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--Border-Color);
+  height: 6rem;
+  margin: 0.5rem 0 1rem 0;
+}
+.file-attachment:hover {
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding: 6px 8px;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 4px;
+  border: 1px solid var(--Border-Color);
+}
+input[type=submit] {
+  width: max-content;
+  float: inline-end;
+}
+
+textarea {
+  width: 100%;
+  height: 15em;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid var(--Border-Color);
+}
+
+select {
+  width: 100%;
+  padding: 0.5em;
+  margin: 0.5rem 0 1rem 0;
+  background-color: white;
+  border: 1px solid var(--Border-Color);
+}
+
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+.cc {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.ccExpir {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  border: 1px solid var(--Border-Color);
+  padding: 0;
+  height: min-content;
+}
+
+#ccDigits {
+  margin: 0;
+}
+
+#ccExpirMM, #ccExpirYY {
+  border: none;
+  margin: 0 auto;
+  padding: 0 inherit;
+}
+
+.border {
+  color: var(--Border-Color);
+}
+
+.hidden {
+  display: none;
+}
+
+.error-message {
+  background-color: var(--Error-Bg-Color);
+  border: 1px solid var(--Error-Border-Color);
+  padding: 8px 16px;
+  margin: 1rem auto;
+}
+.error-message.show {
+  display: block;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 600px) {
+  #topnav div:not(:first-child) {
+    display: none;
+  }
+  #topnav.open {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  #topnav.open div {
+    display: block;
+  }
+  .menu-toggle {
+    float: right;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 0.8rem;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  .menu-bar1, .menu-bar2, .menu-bar3 {
+    display: block;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--Primary-Text-Color);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .change .menu-bar1 {
+    transform: translate(0, 8px) rotate(-45deg);
+  }
+  .change .menu-bar2 {
+    opacity: 0;
+  }
+  .change .menu-bar3 {
+    transform: translate(0, -8px) rotate(45deg);
+  }
+  .nav-links a {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .container-content {
+    padding: 0 1rem;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
