@@ -114,8 +114,9 @@ input[type=file] {
 
 .file-attachment {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border: 1px dashed rgba(0, 0, 0, 0.1);
   height: 6rem;
   margin: 0.5rem 0 1rem 0;

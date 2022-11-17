@@ -18,11 +18,6 @@ if (isBillingIssue === 'false') {
 // form Submit handling
 function getData(form) {
     let formData = new FormData(form);
-  
-    for (const [key, value] of formData.entries()) {
-        console.log(`${key}: ${value}`);
-      }
-
     console.log(Object.fromEntries(formData));
 }
 
@@ -31,6 +26,33 @@ const form = document.getElementById("form");
       event.preventDefault();
       getData(event.target);
     });
+
+// handle form file uploads
+const inputFile = document.querySelector('input[type=file]');
+const attachmentPreview = document.querySelector('.attachment-preview')
+
+inputFile.addEventListener('change', updatePreview);
+function updatePreview() {
+  attachmentPreview.innerHTML = '';
+
+  const curFiles = inputFile.files;
+  if (curFiles.length === 0) {
+    attachmentPreview.innerHTML = "No files currently attached";
+  } else {
+    attachmentPreview.innerHTML = `Attached: ${curFiles[0].name}, size: ${returnFileSize(curFiles[0].size)}`
+  }
+}
+
+function returnFileSize(number) {
+  if (number < 1024) {
+    return `${number} bytes`;
+  } else if (number >= 1024 && number < 1048576) {
+    return `${(number / 1024).toFixed(1)} KB`;
+  } else if (number >= 1048576) {
+    return `${(number / 1048576).toFixed(1)} MB`;
+  }
+}
+
 
 
 const formSubmitButton = document.querySelector('input.button');
@@ -41,6 +63,8 @@ formSubmitButton.addEventListener("click", function (event){
     event.target.style.backgroundColor = 'DarkSeaGreen';
   }
 })
+
+
 
 // Responsive Menu
 function toggleResponsive(menuHam) {
