@@ -107,6 +107,9 @@ label span {
   color: #3A36E4;
   margin-inline-end: 1ch;
 }
+label p {
+  margin-block: 0;
+}
 
 input[type=file] {
   display: none;

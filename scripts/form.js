@@ -53,8 +53,6 @@ function returnFileSize(number) {
   }
 }
 
-
-
 const formSubmitButton = document.querySelector('input.button');
 formSubmitButton.addEventListener("click", function (event){
   const invalids = document.querySelectorAll(':invalid');
@@ -63,7 +61,6 @@ formSubmitButton.addEventListener("click", function (event){
     event.target.style.backgroundColor = 'DarkSeaGreen';
   }
 })
-
 
 
 // Responsive Menu

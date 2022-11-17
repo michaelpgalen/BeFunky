@@ -114,6 +114,9 @@ label {
         color: $Link-Button-Color;
         margin-inline-end: 1ch;
     }
+    p {
+        margin-block: 0;
+    }
 }
 
 input[type=file] {
