@@ -1,5 +1,5 @@
 # BeFunky
-Frontend Web Development project
+Frontend Web Engineering take-home project
 
 ## Viewing the project
 NPM was used to manage the css preprocessor SASS.
